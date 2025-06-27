@@ -1,0 +1,127 @@
+/* Orange Gradient Header */
+.courses-header {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background: linear-gradient(to right, #ff7214a8, #f07630);
+  color: white;
+}
+
+.courses-header h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Courses Section with Light Background */
+.courses-grid {
+  padding: 60px 20px;
+  background: #fff4e6;
+}
+
+/* Individual Course Card */
+.course-img-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-img-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Box with Overlay Info */
+.img-box {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-img-card:hover .img-box img {
+  transform: scale(1.05);
+}
+
+.overlay-top {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.overlay-top span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Course Description Area */
+.course-details {
+  padding: 18px;
+  flex-grow: 1;
+}
+
+.course-details h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ff6f1c;
+}
+
+.course-details p {
+  font-size: 0.9rem;
+  color: #555;
+  height: 50px;
+  overflow: hidden;
+}
+
+/* View Button */
+.btn-view {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ff7214, #ff6f1c);
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.btn-view:hover {
+  background: linear-gradient(to right, #ff6f1c, #ff7214);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .courses-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .course-details p {
+    height: auto;
+  }
+
+  .img-box {
+    height: 180px;
+  }
+}

@@ -1,0 +1,118 @@
+.brochure-modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 700px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+  outline: none;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-heading {
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.close-button {
+  color: #000;
+  position: relative !important;
+  top: -2px !important;
+}
+
+.brochure-image {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.form-section {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-input input {
+  transition: all 0.3s ease;
+}
+
+.form-input input:hover {
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
+}
+
+/* Orange Glow Button */
+.download-btn {
+  background-color: #cc5200; /* Darker orange */
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  /* box-shadow: 0 4px 12px rgba(204, 82, 0, 0.3); soft depth */
+  z-index: 1;
+}
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 103, 2, 0.663) 20%, transparent 70%);
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.download-btn:hover::before {
+  opacity: 1;
+  animation: glow 1.6s ease-in-out infinite;
+}
+
+.download-btn:hover {
+  transform: scale(1.03);
+  /* box-shadow: 0 6px 20px rgba(204, 82, 0, 0.5); */
+  color: black;
+}
+
+.download-btn > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,365 @@
+/* Navbar Container */
+.custom-navbar {
+  background-color: #fffdf9 !important;
+  border-bottom: 1px solid #ffe2c1 !important;
+}
+
+/* Logo */
+.logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* Brand Text */
+.brand-text {
+  color: #ff6600 !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Nav Links */
+.nav-link {
+  color: #444 !important;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ff6600 !important;
+  transition: all 0.3s ease;
+}
+
+.nav-hover:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link:hover {
+  color: #ff6600 !important;
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-orange {
+  background-color: #ff6600 !important;
+  color: white !important;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.btn-orange:hover {
+  background-color: #e25500 !important;
+  transform: scale(1.05);
+}
+
+.btn-outline-orange {
+  border: 2px solid #ff6600 !important;
+  color: #ff6600 !important;
+  background: transparent !important;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.btn-outline-orange:hover {
+  background-color: #ff6600 !important;
+  color: white !important;
+  transform: scale(1.05);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 576px) {
+  .logo-img {
+    height: 34px;
+  }
+
+  .brand-text {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+  }
+
+  .navbar-nav {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .brand-text {
+    display: none;
+  }
+}
+
+.btn-orange {
+  background-color: #ff6600 !important;
+  color: white !important;
+  border: 2px solid #ff6600 !important;
+  padding: 6px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-orange:hover {
+  background-color: white !important;
+  color: #ff6600 !important;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+}
+
+.btn-outline-orange {
+  background-color: transparent !important;
+  color: #ff6600 !important;
+  border: 2px solid #ff6600 !important;
+  padding: 6px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-outline-orange:hover {
+  background-color: #ff6600 !important;
+  color: white !important;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+}
+
+/* Logo styling */
+.logo-img {
+  width: 40px;
+  height: auto;
+}
+
+/* Brand name text */
+.brand-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ff6600 !important;
+}
+
+/* Navigation hover effects */
+.nav-hover {
+  transition: all 0.3s ease;
+}
+
+.nav-hover:hover {
+  color: #ff6600 !important;
+  transform: translateY(-1px);
+}
+
+/* Orange button */
+.btn-orange {
+  background-color: #ff6600 !important;
+  color: white !important;
+  border: 2px solid #ff6600 !important;
+  padding: 6px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-orange:hover {
+  background-color: white !important;
+  color: #ff6600 !important;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3) !important;
+  transform: scale(1.05);
+}
+
+/* Outline orange button */
+.btn-outline-orange {
+  background-color: transparent !important;
+  color: #ff6600 !important;
+  border: 2px solid #ff6600 !important;
+  padding: 6px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-outline-orange:hover {
+  background-color: #ff6600 !important;
+  color: white !important;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3) !important;
+  transform: scale(1.05);
+}
+
+/* Remove Bootstrap's arrow */
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Base dropdown setup */
+.nav-item.dropdown {
+  position: relative;
+}
+
+/* Hide Bootstrap caret arrow */
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Dropdown menu positioning */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  min-width: 220px;
+  padding: 0.5rem 0;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown links */
+.dropdown-item {
+  padding: 10px 16px;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #ff6b00;
+  color: #fff;
+}
+
+/* Optional: style the "Courses" link on hover */
+.nav-link.nav-hover:hover {
+  color: #ff6b00;
+}
+
+/* Glassy dropdown menu */
+.nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.96);
+  transition: all 0.4s ease;
+  min-width: 240px;
+  padding: 0.5rem 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(255, 102, 0, 0.25);
+  overflow: hidden;
+}
+
+/* Neon edge glow */
+.nav-item.dropdown .dropdown-menu::before,
+.nav-item.dropdown .dropdown-menu::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #ff6600;
+  border-radius: 50%;
+  filter: blur(8px);
+  opacity: 0.4;
+  transition: transform 0.4s ease, opacity 0.4s;
+}
+
+.nav-item.dropdown .dropdown-menu::before {
+  top: -8px;
+  left: -8px;
+}
+
+.nav-item.dropdown .dropdown-menu::after {
+  bottom: -8px;
+  right: -8px;
+}
+
+/* Show with animation */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.nav-item.dropdown:hover .dropdown-menu::before,
+.nav-item.dropdown:hover .dropdown-menu::after {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+/* Dropdown item effect */
+.dropdown-item {
+  position: relative;
+  padding: 12px 20px;
+  color: #333;
+  font-weight: 500;
+  z-index: 1;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* Orange sweep animation */
+.dropdown-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ff6600 0%, #ffaa5f 100%);
+  opacity: 0.12;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.dropdown-item:hover::before {
+  left: 0;
+}
+
+.dropdown-item:hover {
+  color: #ff6600;
+  transform: translateX(8px);
+  font-weight: 600;
+}

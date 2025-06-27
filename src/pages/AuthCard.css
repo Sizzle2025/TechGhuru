@@ -1,0 +1,234 @@
+/* AuthCard.css */
+
+:root {
+  --main-orange: #ff6b00;
+  --orange-hover: #e85d00;
+  --white-bg: #ffffff;
+  --font-dark: #333;
+  --radius: 14px;
+  --transition: 0.4s;
+}
+
+.auth-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-bg);
+  min-height: 100vh;
+  padding: 30px 10px;
+  position: relative;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--main-orange);
+  cursor: pointer;
+  font-weight: bold;
+  transition: color var(--transition);
+  display: block;
+  margin: 0 auto 20px auto; /* centers it and adds spacing below */
+  text-align: center;
+}
+
+
+.back-btn:hover {
+  color: var(--orange-hover);
+}
+
+.auth-panel {
+  position: relative;
+  width: 380px;
+  min-height: 570px; /* ✅ Fix: Set minimum height to prevent collapse */
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all var(--transition) ease;
+}
+
+.form-box {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 40px 30px 30px;
+  background-color: #fff;
+  z-index: 1;
+  transition: all var(--transition);
+}
+
+.register-box {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+.mode-register .login-box {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+.mode-register .register-box {
+  transform: translateX(0%);
+  opacity: 1;
+  z-index: 1;
+}
+
+h2 {
+  text-align: center;
+  color: var(--main-orange);
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.field-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.field-group input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.field-group input:focus {
+  border-color: var(--main-orange);
+}
+
+.field-group label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #888;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.field-group input:focus ~ label,
+.field-group input:valid ~ label {
+  top: -10px;
+  left: 8px;
+  font-size: 0.75rem;
+  background: white;
+  padding: 0 5px;
+  color: var(--main-orange);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--main-orange);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.auth-btn:hover {
+  background-color: var(--orange-hover);
+  transform: scale(1.03);
+}
+
+.toggle-text {
+  text-align: center;
+  margin-top: 15px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.toggle-text span {
+  color: var(--main-orange);
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 5px;
+  transition: color 0.3s;
+}
+
+.toggle-text span:hover {
+  color: var(--orange-hover);
+}
+
+/* Logo box and image */
+.logo-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-logo {
+  max-width: 100px;
+  height: auto;
+  height: 80px;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .auth-panel {
+    width: 95%;
+    min-height: 480px;
+    padding: 10px;
+  }
+
+  .form-box {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .auth-logo {
+    max-width: 100px;
+  }
+
+  .auth-btn {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .field-group input {
+    padding: 10px 8px;
+  }
+
+  .field-group label {
+    font-size: 0.9rem;
+  }
+
+  .field-group input:focus ~ label,
+  .field-group input:valid ~ label {
+    font-size: 0.7rem;
+  }
+
+  .back-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .auth-panel {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .auth-logo {
+    max-width: 80px;
+  }
+
+  .auth-btn,
+  .back-btn {
+    font-size: 0.85rem;
+  }
+}
