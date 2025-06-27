@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import { FaUserCircle, FaClock } from "react-icons/fa";
 import img1 from "./Images/fullstack.png";
 import img2 from "./Images/datastructures.jpg";
-import img3 from "./Images/java.jpg";
+import img3 from "./Images/Java.jpg";
 import img4 from "./Images/react-cover.png";
 import img5 from "./Images/datascience.jpg";
 import img6 from "./Images/uiux.png";
