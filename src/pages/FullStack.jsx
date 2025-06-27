@@ -1,7 +1,7 @@
 import React, { useState , useRef } from "react";
 import "./DataScience.css";
 import expert from './Images/experts.jpg';
-import Banner from './Images/fullStack.webp';
+import Banner from './Images/fullstack.webp';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BrochureModal from '../components/BrochureModal';
