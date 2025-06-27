@@ -34,19 +34,20 @@ const Contact = () => {
               <p>
                 <strong>Address:</strong>
                 <br />
-                #12, North Road, near Nandhi Statue,
+                No 1, Gurudev Complex, 57th Street Venkataraman Nagar,
                 <br />
-                CIT Nagar West, Chennai, Tamil Nadu 600035
+                 Korattur, Chennai, Tamil Nadu 600080
               </p>
               <p>
                 <strong>Email:</strong>
                 <br />
-                chn.cit@elysiumacademy.org
+                info@digitalghuru.in 
               </p>
               <p>
                 <strong>Phone:</strong>
                 <br />
-                9941161919
+                +91 8825948859‬
+
               </p>
               <div className="social-icons">
                 <FaFacebookF />
