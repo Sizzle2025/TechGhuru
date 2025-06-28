@@ -13,7 +13,15 @@ import hadoopIcon from './Images/hadoop-original.png';
 import tensorflowIcon from './Images/tensorflow_logo.svg-9036044.png';
 import kafkaIcon from './Images/cq5dam.web.1280.1280.png';
 import ProgramAdvantage from "../components/ProgramAdvantage";
+import aiImage from './Images/images1/datascience.webp';
 
+const aiBenefits = [
+  "This course trains students to analyze large data sets using Python, SQL, and key data science libraries like Pandas, NumPy, and Matplotlib.",
+  "You’ll explore predictive modeling, data visualization, machine learning, and business intelligence tools like Power BI or Tableau.",
+  "Real-life case studies include marketing analysis, churn prediction, and sales forecasting.",
+  "Students also learn data storytelling, dashboards, and end-to-end project pipelines.",
+  "Ideal for aspiring data scientists, business analysts, and anyone transitioning to a data-driven career."
+];
 
 const modules = [
   {
@@ -204,7 +212,26 @@ const DataScience = () => {
         </div>
       </section>
 
-      <section className="tools-section">
+      <section className="ai-benefits-section">
+            <div className="ai-benefits-container">
+              <div className="ai-benefits-right">
+                <img src={aiImage} alt="AI Marketing" className="ai-image" style={{width:"550px",height:"550px"}} />
+              </div>
+              <div className="ai-benefits-left">
+                <h3 className="ai-benefits-heading">Why Learn AI in Marketing?</h3>
+                <div className="ai-benefits-list">
+                  {aiBenefits.map((point, index) => (
+                    <div key={index} className="ai-benefit-item">
+                      <span className="ai-icon">✨</span>
+                      <p>{point}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+           <section className="tools-section">
         <div className="tools-content">
           <p className="tools-subtitle">Curriculum built for real-world impact</p>
           <h2 className="tools-heading">Learn in-demand tools & technologies</h2>

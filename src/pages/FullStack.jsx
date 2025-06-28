@@ -13,7 +13,16 @@ import reactIcon from './Images/react.png';
 import nodeIcon from './Images/node.png';
 import mongoIcon from './Images/mongodb.png';
 import ProgramAdvantage from "../components/ProgramAdvantage";
+import aiImage from './Images/images1/Fullstack.webp';
 
+
+const aiBenefits = [
+  "The Full Stack Development course provides in-depth training in both frontend and backend technologies for building complete web applications.",
+  "Learners will master UI development using HTML, CSS, JavaScript, and modern libraries or frameworks like React or Angular.",
+  "The backend training covers server-side logic, RESTful API development, and database integration using tools like SQL or NoSQL databases.",
+  "Participants will also learn how to deploy applications, manage version control with Git, and use platforms like GitHub, Netlify, or Render.",
+  "Ideal for anyone aiming to become an all-round web developer, this course prepares you for real-world development and high-demand tech roles."
+];
 
 const modules = [
   {
@@ -185,6 +194,28 @@ const FullStack = () => {
             <img src={Banner} alt="Full Stack Course" className="datascience-side-img" />
           </div>
         </div>
+      </section>
+
+    
+            <section className="ai-benefits-section">
+                  <div className="ai-benefits-container">
+                    <div className="ai-benefits-right">
+                      <img src={aiImage} alt="AI Marketing" className="ai-image" style={{height:"600px"}} />
+                    </div>
+                    <div className="ai-benefits-left">
+                      <h3 className="ai-benefits-heading">Why Learn AI in Marketing?</h3>
+                      <div className="ai-benefits-list">
+                        {aiBenefits.map((point, index) => (
+                          <div key={index} className="ai-benefit-item">
+                            <span className="ai-icon">✨</span>
+                            <p>{point}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </section>
+      
          <section className="tools-section">
   <div className="tools-content">
     <p className="tools-subtitle">Curriculum built for real-world impact</p>
@@ -204,7 +235,6 @@ const FullStack = () => {
 </div>
 </div>
 </section>
-      </section>
 
       {/* ===== Curriculum Section ===== */}
             <section className="curriculum-section">

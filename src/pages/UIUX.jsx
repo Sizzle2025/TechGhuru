@@ -11,7 +11,15 @@ import xdIcon from './Images/xd.jpeg';
 import sketchIcon from './Images/sketch.png';
 import photoshopIcon from './Images/photoshop.png';
 import ProgramAdvantage from "../components/ProgramAdvantage";
+import aiImage from './Images/images1/uiux.png';
 
+const aiBenefits = [
+  "This UI/UX Design course teaches modern principles of human-centered design and intuitive user interfaces.",
+  "You’ll learn to design wireframes, prototypes, and interfaces using tools like Figma, Adobe XD, and Sketch.",
+  "The course emphasizes usability testing, accessibility, and responsive design for web and mobile.",
+  "Real-world projects include website redesigns and mobile app mockups, preparing you for real client work.",
+  "Perfect for graphic designers, product managers, or beginners looking to enter the UX field."
+];
 
 const modules = [
   {
@@ -174,7 +182,28 @@ const UIUX = () => {
             <img src={Banner} alt="UIUX Course" className="datascience-side-img" />
           </div>
         </div>
-        <section className="tools-section">
+      </section>
+
+        <section className="ai-benefits-section">
+              <div className="ai-benefits-container">
+                <div className="ai-benefits-right">
+                  <img src={aiImage} alt="AI Marketing" className="ai-image" style={{width:"550px",height:"550px"}} />
+                </div>
+                <div className="ai-benefits-left">
+                  <h3 className="ai-benefits-heading">Why Learn AI in Marketing?</h3>
+                  <div className="ai-benefits-list">
+                    {aiBenefits.map((point, index) => (
+                      <div key={index} className="ai-benefit-item">
+                        <span className="ai-icon">✨</span>
+                        <p>{point}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="tools-section">
   <div className="tools-content">
     <p className="tools-subtitle">Curriculum built for real-world impact</p>
     <h2 className="tools-heading">Learn in-demand tools & technologies</h2>
@@ -193,7 +222,6 @@ const UIUX = () => {
 
   
     </section>
-      </section>
 
       {/* ===== Curriculum Section ===== */}
             <section className="curriculum-section">

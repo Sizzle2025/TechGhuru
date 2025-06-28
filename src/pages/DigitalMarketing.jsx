@@ -13,7 +13,7 @@ import hubspotIcon from './Images/hubspot.png';
 import mailchimpIcon from './Images/mailchimp.png';
 import googleAnalyticsIcon from './Images/googleanalytics.png';
 import ProgramAdvantage from "../components/ProgramAdvantage";
-
+import aiImage from './Images/Ai-marketing.png';
 
 const modules = [
   {
@@ -73,7 +73,13 @@ const modules = [
   }
 ];
 
-
+const aiBenefits = [
+  "The AI Marketing Course looks at practical applications that may actually be very relevant to making a difference in marketing strategy",
+  "AI-driven data analysis for acquiring customer insights, automated generation of content, chatbots for customer service, and predictive analytics about targeted marketing campaigns.",
+  "Participants will learn how AI can optimize ad spend, fine-tune customer segmentation, and enhance user experiences across digital platforms.",
+  "These are practical skills necessary to thrive in today's competitive marketing environment.",
+  "Whether you are a digital marketer who is really enthusiastic about leveling up in your career or an aspiring beginner, this course suits all levels."
+];
 
 const DigitalMarketing = () => {
     const brochureRef = useRef();
@@ -132,7 +138,30 @@ const DigitalMarketing = () => {
             <img src={Banner} alt="Digital Marketing Course" className="datascience-side-img" />
           </div>
         </div>
-        <section className="tools-section">
+        
+      </section>
+<section className="ai-benefits-section">
+  <div className="ai-benefits-container">
+    <div className="ai-benefits-right">
+      <img src={aiImage} alt="AI Marketing" className="ai-image" />
+    </div>
+    <div className="ai-benefits-left">
+      <h3 className="ai-benefits-heading">Why Learn AI in Marketing?</h3>
+      <div className="ai-benefits-list">
+        {aiBenefits.map((point, index) => (
+          <div key={index} className="ai-benefit-item">
+            <span className="ai-icon">✨</span>
+            <p>{point}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section className="tools-section">
         <div className="tools-content">
           <p className="tools-subtitle">Curriculum built for real-world impact</p>
           <h2 className="tools-heading">Learn in-demand tools & technologies</h2>
@@ -151,8 +180,6 @@ const DigitalMarketing = () => {
 </div>
 </div>
 </section>
-      </section>
-
       {/* ===== Curriculum Section ===== */}
             <section className="curriculum-section">
               <div className="curriculum-container">

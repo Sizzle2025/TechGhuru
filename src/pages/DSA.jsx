@@ -10,6 +10,7 @@ import pythonIcon from './Images/python.svg';
 import javaIcon from './Images/java1.webp';
 import leetcodeIcon from './Images/leetcode.webp';
 import ProgramAdvantage from "../components/ProgramAdvantage";
+import aiImage from './Images/images1/dsa11.png';
 
 
 const modules = [
@@ -115,6 +116,13 @@ const modules = [
   }
 ];
 
+const aiBenefits = [
+  "This DSA course strengthens algorithmic thinking through data structures like arrays, stacks, queues, linked lists, trees, and graphs.",
+  "You'll implement solutions in both Java and Python for maximum industry relevance and flexibility.",
+  "Each module includes time and space complexity analysis, competitive coding, and interview preparation.",
+  "Hands-on problem-solving with LeetCode, HackerRank, and mock interviews is part of the journey.",
+  "Designed for students preparing for placements, coding competitions, or top tech company interviews."
+];
 
 const DSA = () => {
   const brochureRef = useRef();
@@ -172,7 +180,27 @@ const DSA = () => {
             <img src={Banner} alt="DSA Course" className="datascience-side-img" />
           </div>
         </div>
-               <section className="tools-section">
+       
+      </section>
+      <section className="ai-benefits-section">
+        <div className="ai-benefits-container">
+          <div className="ai-benefits-right">
+            <img src={aiImage} alt="AI Marketing" className="ai-image" />
+          </div>
+          <div className="ai-benefits-left">
+            <h3 className="ai-benefits-heading">Why Learn DSA?</h3>
+            <div className="ai-benefits-list">
+              {aiBenefits.map((point, index) => (
+                <div key={index} className="ai-benefit-item">
+                  <span className="ai-icon">✨</span>
+                  <p>{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+              <section className="tools-section">
   <div className="tools-content">
     <p className="tools-subtitle">Curriculum built for real-world impact</p>
     <h2 className="tools-heading">Learn in-demand tools & technologies</h2>
@@ -189,7 +217,6 @@ const DSA = () => {
 </div>
 </div>
 </section>
-      </section>
 
       {/* ===== Curriculum Section ===== */}
             <section className="curriculum-section">

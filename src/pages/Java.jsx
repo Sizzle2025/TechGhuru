@@ -11,7 +11,15 @@ import springIcon from './Images/spring.png';
 import mysqlIcon from './Images/mysql.png';
 import hibernateIcon from './Images/hiberate.png';
 import ProgramAdvantage from "../components/ProgramAdvantage";
+import aiImage from './Images/images1/java.png';
 
+const aiBenefits = [
+  "This Java Full Stack course bridges frontend and backend development using HTML, CSS, JavaScript, Spring Boot, and MySQL.",
+  "Students learn how to build enterprise-level web applications with a focus on layered architecture and secure REST APIs.",
+  "Spring Boot, Hibernate, and JPA are covered in-depth along with tools like Postman, Maven, and Git.",
+  "Real-time projects teach you how to manage user authentication, database integration, and deployment.",
+  "Ideal for aspiring backend or full stack Java developers looking to work in enterprise environments."
+];
 
 const modules = [
   {
@@ -174,6 +182,28 @@ const Java = () => {
             <img src={Banner} alt="Java Course" className="datascience-side-img" />
           </div>
         </div>
+      </section>
+
+        <section className="ai-benefits-section">
+              <div className="ai-benefits-container">
+                <div className="ai-benefits-right">
+                  <img src={aiImage} alt="AI Marketing" className="ai-image"/>
+                </div>
+                <div className="ai-benefits-left">
+                  <h3 className="ai-benefits-heading">Why Learn AI in Marketing?</h3>
+                  <div className="ai-benefits-list">
+                    {aiBenefits.map((point, index) => (
+                      <div key={index} className="ai-benefit-item">
+                        <span className="ai-icon">✨</span>
+                        <p>{point}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            
                 <section className="tools-section">
   <div className="tools-content">
     <p className="tools-subtitle">Curriculum built for real-world impact</p>
@@ -191,7 +221,6 @@ const Java = () => {
 </div>
 </div>
 </section>
-      </section>
 
       {/* ===== Curriculum Section ===== */}
             <section className="curriculum-section">

@@ -13,7 +13,15 @@ import flaskIcon from './Images/flask.png';
 import pandasIcon from './Images/pandas.png';
 import jupyterIcon from './Images/jypter.png';
 import ProgramAdvantage from "../components/ProgramAdvantage";
+import aiImage from './Images/images1/python-full-stack.png';
 
+const aiBenefits = [
+  "The Python Full Stack course covers web development using Django/Flask, React or Bootstrap, and PostgreSQL/MySQL.",
+  "You'll build robust web apps by integrating Python backend logic with dynamic frontends.",
+  "Key skills include API creation, ORM, CRUD operations, deployment via Heroku, and version control with Git.",
+  "Practical sessions ensure strong problem-solving and scalable architecture design.",
+  "Best suited for those looking to launch a career as a Python developer or backend engineer."
+];
 
 const modules = [
   {
@@ -169,6 +177,28 @@ const Python = () => {
             <img src={Banner} alt="Python Course" className="datascience-side-img" />
           </div>
         </div>
+      </section>
+
+        <section className="ai-benefits-section">
+              <div className="ai-benefits-container">
+                <div className="ai-benefits-right">
+                  <img src={aiImage} alt="AI Marketing" className="ai-image" style={{width:"550px",height:"550px"}}/>
+                </div>
+                <div className="ai-benefits-left">
+                  <h3 className="ai-benefits-heading">Why Learn AI in Marketing?</h3>
+                  <div className="ai-benefits-list">
+                    {aiBenefits.map((point, index) => (
+                      <div key={index} className="ai-benefit-item">
+                        <span className="ai-icon">✨</span>
+                        <p>{point}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            
               <section className="tools-section">
   <div className="tools-content">
     <p className="tools-subtitle">Curriculum built for real-world impact</p>
@@ -189,7 +219,6 @@ const Python = () => {
 
   </div>
 </section>
-      </section>
 
       {/* ===== Curriculum Section ===== */}
             <section className="curriculum-section">
