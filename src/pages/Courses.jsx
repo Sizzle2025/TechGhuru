@@ -9,6 +9,8 @@ import img3 from "./Images/Java.jpg";
 import img4 from "./Images/react-cover.png";
 import img5 from "./Images/datascience.jpg";
 import img6 from "./Images/uiux.png";
+import img7 from "./Images/digitalmarketing.jpg";
+import img8 from "./Images/Datascience1.jpg";
 import "./Courses.css";
 
 const courseData = [
@@ -18,6 +20,7 @@ const courseData = [
     desc: "Master frontend & backend with HTML, CSS, React, Node.js, and MongoDB.",
     duration: "4.5 Hrs",
     students: 100,
+    link: "/fullstack"
   },
   {
     title: "Data Structures & Algorithms",
@@ -25,6 +28,7 @@ const courseData = [
     desc: "Ace problem-solving with Java-based DSA modules and real-time coding.",
     duration: "5 Hrs",
     students: 85,
+    link: "/dsa"
   },
   {
     title: "Java Programming Mastery",
@@ -32,6 +36,7 @@ const courseData = [
     desc: "Core Java, OOPs, JDBC, Threads, and project-based learning.",
     duration: "6 Hrs",
     students: 120,
+    link: "/java"
   },
   {
     title: "React Frontend Design",
@@ -39,6 +44,7 @@ const courseData = [
     desc: "Hands-on projects using ReactJS, hooks, routing, and design patterns.",
     duration: "4 Hrs",
     students: 95,
+    link: "/react"
   },
   {
     title: "Python for Data Science",
@@ -46,6 +52,7 @@ const courseData = [
     desc: "Master NumPy, Pandas, Matplotlib with real-world datasets.",
     duration: "5.5 Hrs",
     students: 110,
+    link: "/python"
   },
   {
     title: "UI/UX Design & Prototyping",
@@ -53,8 +60,26 @@ const courseData = [
     desc: "Learn design principles, Figma, wireframes, color theory, and prototyping.",
     duration: "3.5 Hrs",
     students: 75,
+    link: "/uiux"
   },
+  {
+  title: "AI-Powered Digital Marketing",
+  image: img7, // Replace with a relevant digital marketing image
+  desc: "Leverage AI tools, automation, customer targeting, and analytics in modern marketing.",
+  duration: "4 Hrs",
+  students: 90,
+  link: "/digitalmarketing"
+  },
+  {
+  title: "Advanced Data Science & AI",
+  image: img8, // You can use a new AI-related image if needed
+  desc: "Deep dive into machine learning, deep learning, neural networks, and AI model deployment.",
+  duration: "6.5 Hrs",
+  students: 130,
+  link: "/datascience"
+  }
 ];
+
 
 const Courses = () => {
   return (
@@ -85,7 +110,7 @@ const Courses = () => {
                   <div className="course-details">
                     <h5>{course.title}</h5>
                     <p>{course.desc}</p>
-                    <Link to="/signup" className="btn-view">
+                    <Link to={course.link} className="btn-view">
                       View Course →
                     </Link>
                   </div>
