@@ -87,7 +87,7 @@ const Courses = () => {
       <Navbar />
 
       <section className="courses-header">
-        <h2> Available Courses</h2>
+      <h2 style={{color:"#ff6f1c"}}>Available course</h2>
       </section>
 
       <section className="courses-grid">
